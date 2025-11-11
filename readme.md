@@ -5,7 +5,7 @@ Instalação do OpenCV:
 sudo apt install libopenv-dev
 
 Compilação do programa:
-gcc ++ openCam.c -o openCam `pkg-config --cflags --libs opencv4`
+g++ openCam.c -o openCam `pkg-config --cflags --libs opencv4`
 
 Executar o programa:
 ./openCam
