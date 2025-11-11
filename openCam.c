@@ -15,29 +15,30 @@
 
 int main()
 {
-  cv::VideoCapture cam(0);
+  cv::VideoCapture cam(0);  // argumento 0 representa a camera padrão, se tiver outras pode passar 1, 2, 3, etc.
   
   if(!cam.isOpened())
   {
     printf("Erro: nao foi possivel abrir a camera.\n");
-    return -1;
+    return -1;  // Se houver um erro, retorne ele.
   }
 
-  cv::Mat frame;
+  cv::Mat frame;  // Criando um objeto que vai receber os quadros do OpenCV.
   
-  while(true)
+  while(true)  // Laco infinito da janela
   {
-    cam >> frame;
+    cam >> frame;  // Passando os quadros, e armazenando em frame
 
-    if(frame.empty())break;
+    if(frame.empty())break;  // Verifique se estão limpos
     
-    cv::imshow("Webcam", frame);
+    cv::imshow("Webcam", frame);  // Criar uma janela com o nome de webcam.
     
-    if(cv::waitKey(30) >= 0)break;
+    if(cv::waitKey(30) >= 0)break;  // Aponte para a camera, e feche com teclar de qualquer tecla
   }
 
-  cam.release();
-  cv::destroyAllWindows();
+  cam.release();  // Fechando todos recursos associados ao OpenCV
+  
+  cv::destroyAllWindows();  // Fechar a janela.
   
   return 0;
 }
