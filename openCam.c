@@ -1,3 +1,9 @@
+// O programa começa e tenta abrir a webcam.
+// Se a webcam for aberta corretamente com sucesso, ele entra em um loop infinito,
+// onde captura um frame de vídeo a cada iteração.
+// Cada frame capturado é exibido em uma janela chamada "webcam".
+// O programa continua exibindo o vídeo até que o usuário tecle qualquer tecla para fechar.
+
 #include <opencv2/opencv.hpp>
 #include <stdio.h>
 
